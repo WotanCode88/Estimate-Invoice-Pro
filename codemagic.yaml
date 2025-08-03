@@ -17,6 +17,7 @@ workflows:
             -sdk iphoneos \
             -configuration Release \
             -archivePath "$HOME/build/$XCODE_SCHEME.xcarchive" \
+            -allowProvisioningUpdates \
             archive
 
           xcodebuild -exportArchive \
