@@ -1,0 +1,20 @@
+current directory: /Users/szczabelsydaniel/Documents/XTeam/Estimate & Invoice Pro/vendor/bundle/ruby/3.4.0/gems/sysrandom-1.0.5/ext/sysrandom
+/opt/homebrew/opt/ruby/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/szczabelsydaniel/Documents/XTeam/Estimate & Invoice Pro/vendor/bundle/ruby/3.4.0/gems/sysrandom-1.0.5/ext/sysrandom
+make DESTDIR\= sitearchdir\=./.gem.20250804-2098-ed3e9z sitelibdir\=./.gem.20250804-2098-ed3e9z clean
+
+current directory: /Users/szczabelsydaniel/Documents/XTeam/Estimate & Invoice Pro/vendor/bundle/ruby/3.4.0/gems/sysrandom-1.0.5/ext/sysrandom
+make DESTDIR\= sitearchdir\=./.gem.20250804-2098-ed3e9z sitelibdir\=./.gem.20250804-2098-ed3e9z
+compiling randombytes_sysrandom.c
+compiling sysrandom_ext.c
+linking shared-object sysrandom_ext.bundle
+ld: warning: search path '/opt/homebrew/Cellar/openssl@3/3.4.0/lib' not found
+
+current directory: /Users/szczabelsydaniel/Documents/XTeam/Estimate & Invoice Pro/vendor/bundle/ruby/3.4.0/gems/sysrandom-1.0.5/ext/sysrandom
+make DESTDIR\= sitearchdir\=./.gem.20250804-2098-ed3e9z sitelibdir\=./.gem.20250804-2098-ed3e9z install
+/usr/bin/install -c -m 0755 sysrandom_ext.bundle ./.gem.20250804-2098-ed3e9z
+
+current directory: /Users/szczabelsydaniel/Documents/XTeam/Estimate & Invoice Pro/vendor/bundle/ruby/3.4.0/gems/sysrandom-1.0.5/ext/sysrandom
+make DESTDIR\= sitearchdir\=./.gem.20250804-2098-ed3e9z sitelibdir\=./.gem.20250804-2098-ed3e9z clean
