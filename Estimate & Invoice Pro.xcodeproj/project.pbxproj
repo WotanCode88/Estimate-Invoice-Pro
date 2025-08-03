@@ -1,0 +1,568 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6A6ADBDF2E3FB24E00FEE734 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6A6ADBDE2E3FB24E00FEE734 /* RealmSwift */; };
+		6A6ADBE22E3FB26700FEE734 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 6A6ADBE12E3FB26700FEE734 /* Alamofire */; };
+		6A6ADBE72E3FB28C00FEE734 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6A6ADBE62E3FB28C00FEE734 /* SnapKit */; };
+		6A6ADBEA2E3FB29900FEE734 /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 6A6ADBDE2E3FB24E00FEE734 /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		6A6ADD092E3FB4E100FEE734 /* SubscriptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6ADC982E3FB2BC00FEE734 /* SubscriptionViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6A6ADBEB2E3FB29900FEE734 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6A6ADBEA2E3FB29900FEE734 /* RealmSwift in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6A6ADC982E3FB2BC00FEE734 /* SubscriptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionViewModel.swift; sourceTree = "<group>"; };
+		6A6ADD082E3FB31B00FEE734 /* Estimate & Invoice Pro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Estimate & Invoice Pro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		6A6ADD502E3FB4E100FEE734 /* Exceptions for "App" folder in "Estimate & Invoice Pro" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				AppDelegate.swift,
+				LaunchScreen.storyboard,
+				SceneDelegate.swift,
+			);
+			target = 6A6ADBC22E3FB0CD00FEE734 /* Estimate & Invoice Pro */;
+		};
+		6A6ADD522E3FB4E100FEE734 /* Exceptions for "Core" folder in "Estimate & Invoice Pro" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Domain/UserViewModel.swift,
+				Routing/LaunchCoordinator.swift,
+				Routing/MainCoordinator.swift,
+			);
+			target = 6A6ADBC22E3FB0CD00FEE734 /* Estimate & Invoice Pro */;
+		};
+		6A6ADD532E3FB4E100FEE734 /* Exceptions for "Models" folder in "Estimate & Invoice Pro" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				ClientModel.swift,
+				CoreModel.swift,
+				InvoiceModel.swift,
+				ItemModel.swift,
+				UserModel.swift,
+			);
+			target = 6A6ADBC22E3FB0CD00FEE734 /* Estimate & Invoice Pro */;
+		};
+		6A6ADD542E3FB4E100FEE734 /* Exceptions for "Modules" folder in "Estimate & Invoice Pro" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Authorization/Domain/AuthorizationViewModel.swift,
+				Authorization/UI/AuthorizationFirstView.swift,
+				Authorization/UI/AuthorizationSecondView.swift,
+				Client/AddClient/AddClientView.swift,
+				Client/AddClient/AddClientViewModel.swift,
+				Client/AddClient/ContactPicker.swift,
+				Client/ClientMainView/Domain/ClientsCoordinator.swift,
+				Client/ClientMainView/Domain/ClientsViewModel.swift,
+				Client/ClientMainView/UI/ClientsView.swift,
+				Client/ClientMainView/UI/SearchBar.swift,
+				Invoices/Domain/Currency.swift,
+				Invoices/Domain/InvoicesCoordinator.swift,
+				"Invoices/Estimate/Create Estimate/EstimateDatesSection.swift",
+				"Invoices/Estimate/Create Estimate/EstimateHeaderView.swift",
+				"Invoices/Estimate/Create Estimate/EstimateViewModel.swift",
+				"Invoices/Estimate/Create Estimate/NewEstimateView.swift",
+				Invoices/Estimate/EstimatesTabView.swift,
+				"Invoices/Estimate/Single Estimate/SingleEstimateVC.swift",
+				"Invoices/Estimate/Single Estimate/SingleEstimateWrapper.swift",
+				"Invoices/Invoice/Create Invoice/New Invoice/Domain/ClientListViewModel.swift",
+				"Invoices/Invoice/Create Invoice/New Invoice/Domain/ItemListViewModel.swift",
+				"Invoices/Invoice/Create Invoice/New Invoice/Domain/NewInvoiceViewModel.swift",
+				"Invoices/Invoice/Create Invoice/New Invoice/UI/ClientLogoView.swift",
+				"Invoices/Invoice/Create Invoice/New Invoice/UI/HeaderView.swift",
+				"Invoices/Invoice/Create Invoice/New Invoice/UI/InvoiceDatesSection.swift",
+				"Invoices/Invoice/Create Invoice/New Invoice/UI/InvoiceSummarySection.swift",
+				"Invoices/Invoice/Create Invoice/New Invoice/UI/ItemSheetView.swift",
+				"Invoices/Invoice/Create Invoice/New Invoice/UI/NewInvoiceView.swift",
+				"Invoices/Invoice/Create Invoice/PreviewInvoice/InvoiceJustPreview.swift",
+				"Invoices/Invoice/Create Invoice/PreviewInvoice/InvoicePreviewDelegate.swift",
+				"Invoices/Invoice/Create Invoice/PreviewInvoice/InvoicePreviewView.swift",
+				"Invoices/Invoice/Create Invoice/PreviewInvoice/InvoicePreviewViewController.swift",
+				"Invoices/Invoice/Create Invoice/PreviewInvoice/InvoicePreviewViewModel.swift",
+				Invoices/Invoice/Item/ItemView.swift,
+				Invoices/Invoice/Item/ItemViewModel.swift,
+				Invoices/Invoice/Single/BottomView.swift,
+				Invoices/Invoice/Single/Helpers.swift,
+				Invoices/Invoice/Single/Selectors.swift,
+				Invoices/Invoice/Single/SetupInvoice.swift,
+				Invoices/Invoice/Single/SingleInvoiceVC.swift,
+				"Invoices/Invoice/Tab View/EstimatesViewModel.swift",
+				"Invoices/Invoice/Tab View/InvoicesTabView.swift",
+				"Invoices/Invoice/Tab View/InvoicesViewModel.swift",
+				Invoices/InvoicesView.swift,
+				Reports/ReportsView.swift,
+				Settings/Buisness/BuisnessView.swift,
+				Settings/Item/ItemSettingsView.swift,
+				"Settings/Personal /Auth/PersonalAuthorizationView.swift",
+				"Settings/Personal /Auth/PersonalAuthorizationViewModel.swift",
+				"Settings/Personal /PersonalView.swift",
+				Settings/SettingsView.swift,
+				Subsription/SubscriptionView.swift,
+				TabView/MainTabView.swift,
+			);
+			target = 6A6ADBC22E3FB0CD00FEE734 /* Estimate & Invoice Pro */;
+		};
+		6A6ADD552E3FB4E100FEE734 /* Exceptions for "Resources" folder in "Estimate & Invoice Pro" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Assets.xcassets,
+				Font/Font.swift,
+				"Font/SongMyung-Regular.ttf",
+				"Font/Urbanist-VariableFont_wght.ttf",
+			);
+			target = 6A6ADBC22E3FB0CD00FEE734 /* Estimate & Invoice Pro */;
+		};
+		6A6ADD572E3FB4E100FEE734 /* Exceptions for "Shared" folder in "Estimate & Invoice Pro" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"Extentions/UIApp + ext.swift",
+			);
+			target = 6A6ADBC22E3FB0CD00FEE734 /* Estimate & Invoice Pro */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		6A6ADC9C2E3FB2BC00FEE734 /* App */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				6A6ADD502E3FB4E100FEE734 /* Exceptions for "App" folder in "Estimate & Invoice Pro" target */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		6A6ADCA22E3FB2BC00FEE734 /* Core */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				6A6ADD522E3FB4E100FEE734 /* Exceptions for "Core" folder in "Estimate & Invoice Pro" target */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		6A6ADCA82E3FB2BC00FEE734 /* Models */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				6A6ADD532E3FB4E100FEE734 /* Exceptions for "Models" folder in "Estimate & Invoice Pro" target */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6A6ADCFC2E3FB2BC00FEE734 /* Modules */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				6A6ADD542E3FB4E100FEE734 /* Exceptions for "Modules" folder in "Estimate & Invoice Pro" target */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		6A6ADD042E3FB2BC00FEE734 /* Resources */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				6A6ADD552E3FB4E100FEE734 /* Exceptions for "Resources" folder in "Estimate & Invoice Pro" target */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6A6ADD072E3FB2BC00FEE734 /* Shared */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				6A6ADD572E3FB4E100FEE734 /* Exceptions for "Shared" folder in "Estimate & Invoice Pro" target */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6A6ADBC02E3FB0CD00FEE734 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A6ADBE22E3FB26700FEE734 /* Alamofire in Frameworks */,
+				6A6ADBDF2E3FB24E00FEE734 /* RealmSwift in Frameworks */,
+				6A6ADBE72E3FB28C00FEE734 /* SnapKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6A6ADBBA2E3FB0CD00FEE734 = {
+			isa = PBXGroup;
+			children = (
+				6A6ADC982E3FB2BC00FEE734 /* SubscriptionViewModel.swift */,
+				6A6ADC9C2E3FB2BC00FEE734 /* App */,
+				6A6ADCA22E3FB2BC00FEE734 /* Core */,
+				6A6ADCA82E3FB2BC00FEE734 /* Models */,
+				6A6ADCFC2E3FB2BC00FEE734 /* Modules */,
+				6A6ADD042E3FB2BC00FEE734 /* Resources */,
+				6A6ADD072E3FB2BC00FEE734 /* Shared */,
+				6A6ADD082E3FB31B00FEE734 /* Estimate & Invoice Pro.app */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6A6ADBC22E3FB0CD00FEE734 /* Estimate & Invoice Pro */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6A6ADBD62E3FB0CF00FEE734 /* Build configuration list for PBXNativeTarget "Estimate & Invoice Pro" */;
+			buildPhases = (
+				6A6ADBBF2E3FB0CD00FEE734 /* Sources */,
+				6A6ADBC02E3FB0CD00FEE734 /* Frameworks */,
+				6A6ADBC12E3FB0CD00FEE734 /* Resources */,
+				6A6ADBEB2E3FB29900FEE734 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Estimate & Invoice Pro";
+			packageProductDependencies = (
+				6A6ADBDE2E3FB24E00FEE734 /* RealmSwift */,
+				6A6ADBE12E3FB26700FEE734 /* Alamofire */,
+				6A6ADBE62E3FB28C00FEE734 /* SnapKit */,
+			);
+			productName = "Estimate & Invoice Pro";
+			productReference = 6A6ADD082E3FB31B00FEE734 /* Estimate & Invoice Pro.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6A6ADBBB2E3FB0CD00FEE734 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2600;
+				LastUpgradeCheck = 2600;
+				TargetAttributes = {
+					6A6ADBC22E3FB0CD00FEE734 = {
+						CreatedOnToolsVersion = 26.0;
+					};
+				};
+			};
+			buildConfigurationList = 6A6ADBBE2E3FB0CD00FEE734 /* Build configuration list for PBXProject "Estimate & Invoice Pro" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6A6ADBBA2E3FB0CD00FEE734;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				6A6ADBDB2E3FB24D00FEE734 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				6A6ADBE02E3FB26700FEE734 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				6A6ADBE52E3FB28C00FEE734 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 6A6ADBBA2E3FB0CD00FEE734;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6A6ADBC22E3FB0CD00FEE734 /* Estimate & Invoice Pro */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6A6ADBC12E3FB0CD00FEE734 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6A6ADBBF2E3FB0CD00FEE734 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A6ADD092E3FB4E100FEE734 /* SubscriptionViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		6A6ADBD72E3FB0CF00FEE734 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HW3Y22VF4Y;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = App/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.estimate.proapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		6A6ADBD82E3FB0CF00FEE734 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HW3Y22VF4Y;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = App/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.estimate.proapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		6A6ADBD92E3FB0CF00FEE734 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 4FV59Y3246;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6A6ADBDA2E3FB0CF00FEE734 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 4FV59Y3246;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6A6ADBBE2E3FB0CD00FEE734 /* Build configuration list for PBXProject "Estimate & Invoice Pro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A6ADBD92E3FB0CF00FEE734 /* Debug */,
+				6A6ADBDA2E3FB0CF00FEE734 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6A6ADBD62E3FB0CF00FEE734 /* Build configuration list for PBXNativeTarget "Estimate & Invoice Pro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A6ADBD72E3FB0CF00FEE734 /* Debug */,
+				6A6ADBD82E3FB0CF00FEE734 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6A6ADBDB2E3FB24D00FEE734 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		6A6ADBE02E3FB26700FEE734 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.2;
+			};
+		};
+		6A6ADBE52E3FB28C00FEE734 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6A6ADBDE2E3FB24E00FEE734 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6A6ADBDB2E3FB24D00FEE734 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+		6A6ADBE12E3FB26700FEE734 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6A6ADBE02E3FB26700FEE734 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		6A6ADBE62E3FB28C00FEE734 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6A6ADBE52E3FB28C00FEE734 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 6A6ADBBB2E3FB0CD00FEE734 /* Project object */;
+}
