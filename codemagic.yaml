@@ -6,9 +6,6 @@ workflows:
       vars:
         XCODE_PROJECT: "Estimate & Invoice Pro.xcodeproj"
         XCODE_SCHEME: "Estimate & Invoice Pro"
-      cocoapods: false
-      carthage: false
-      flutter: false
     scripts:
       - name: Resolve Swift Package Manager dependencies
         script: |
