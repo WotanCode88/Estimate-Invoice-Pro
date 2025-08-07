@@ -3,7 +3,7 @@ import Foundation
 
 final class UserModel: Object {
     @Persisted(primaryKey: true) var _id: ObjectId = ObjectId.generate()
-    @Persisted var isSubscribed: Bool = false
+    @Persisted var isSubscribed: Bool = true
     @Persisted var name: String
     @Persisted var email: String?
     @Persisted var phone: Int?

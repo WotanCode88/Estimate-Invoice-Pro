@@ -1,5 +1,7 @@
 import SwiftUI
 import RealmSwift
+import WebKit
+import MessageUI
 
 struct SettingsView: View {
     @StateObject private var subscriptionVM = SubscriptionViewModel.shared
@@ -7,6 +9,9 @@ struct SettingsView: View {
     @State private var isPresentingPersonal = false
     @State private var isPresentingBusiness = false
     @State private var isPresentingItems = false
+
+    @State private var isPresentingPolicySheet = false
+    @State private var isShowingMailAlert = false
 
     @ObservedObject private var userVM = UserViewModel.shared
 
@@ -17,6 +22,8 @@ struct SettingsView: View {
         let second = components.dropFirst().first?.prefix(1) ?? ""
         return "\(first)\(second)".uppercased()
     }
+    
+    private let policyURL = URL(string: "https://www.freeprivacypolicy.com/live/8fbdbf58-0ba7-4bd3-b422-f9cf8beabd45")!
 
     var body: some View {
         ZStack {
@@ -29,7 +36,6 @@ struct SettingsView: View {
                     RoundedRectangle(cornerRadius: 16)
                         .fill(Color.white)
                         .frame(width: 72, height: 72)
-                    // Показываем лого пользователя, если есть
                     if let logoData = userVM.currentUser?.logo, let logoImage = UIImage(data: logoData) {
                         Image(uiImage: logoImage)
                             .resizable()
@@ -143,107 +149,77 @@ struct SettingsView: View {
                 .padding(.horizontal, 32)
                 .padding(.top, 20)
 
-//                VStack(spacing: 0) {
-//                    Button(action: {
-//                        // TODO: Rate App action
-//                    }) {
-//                        HStack(spacing: 12) {
-//                            Image("rateAppAsset")
-//                                .resizable()
-//                                .frame(width: 22, height: 22)
-//                            Text("Rate App")
-//                                .font(.system(size: 16, weight: .regular))
-//                                .foregroundColor(.black)
-//                            Spacer()
-//                        }
-//                        .frame(height: 46)
-//                        .padding(.horizontal, 20)
-//                    }
-//
-//                    Divider()
-//                        .background(Color(.systemGray4))
-//
-//                    Button(action: {
-//                        // TODO: Contact Us action
-//                    }) {
-//                        HStack(spacing: 12) {
-//                            Image("contactAsset")
-//                                .resizable()
-//                                .frame(width: 22, height: 22)
-//                            Text("Contact Us")
-//                                .font(.system(size: 16, weight: .regular))
-//                                .foregroundColor(.black)
-//                            Spacer()
-//                        }
-//                        .frame(height: 46)
-//                        .padding(.horizontal, 20)
-//                    }
-//
-//                    Divider()
-//                        .background(Color(.systemGray4))
-//
-//                    Button(action: {
-//                        // TODO: Tell Friends action
-//                    }) {
-//                        HStack(spacing: 12) {
-//                            Image("tellAsset")
-//                                .resizable()
-//                                .frame(width: 22, height: 22)
-//                            Text("Tell Friends")
-//                                .font(.system(size: 16, weight: .regular))
-//                                .foregroundColor(.black)
-//                            Spacer()
-//                        }
-//                        .frame(height: 46)
-//                        .padding(.horizontal, 20)
-//                    }
-//
-//                    Divider()
-//                        .background(Color(.systemGray4))
-//
-//                    Button(action: {
-//                        // TODO: Privacy Policy action
-//                    }) {
-//                        HStack(spacing: 12) {
-//                            Image("privacyAsset")
-//                                .resizable()
-//                                .frame(width: 22, height: 22)
-//                            Text("Privacy Policy")
-//                                .font(.system(size: 16, weight: .regular))
-//                                .foregroundColor(.black)
-//                            Spacer()
-//                        }
-//                        .frame(height: 46)
-//                        .padding(.horizontal, 20)
-//                    }
-//
-//                    Divider()
-//                        .background(Color(.systemGray4))
-//
-//                    Button(action: {
-//                        // TODO: Terms Of Use action
-//                    }) {
-//                        HStack(spacing: 12) {
-//                            Image("termsAsset")
-//                                .resizable()
-//                                .frame(width: 22, height: 22)
-//                            Text("Terms Of Use")
-//                                .font(.system(size: 16, weight: .regular))
-//                                .foregroundColor(.black)
-//                            Spacer()
-//                        }
-//                        .frame(height: 46)
-//                        .padding(.horizontal, 20)
-//                    }
-//                }
-//                .background(Color.white)
-//                .cornerRadius(12)
-//                .overlay(
-//                    RoundedRectangle(cornerRadius: 12)
-//                        .stroke(Color(.systemGray3), lineWidth: 1)
-//                )
-//                .padding(.horizontal, 32)
-//                .padding(.top, 20)
+                VStack(spacing: 0) {
+
+                    Button(action: {
+                        openMail()
+                    }) {
+                        HStack(spacing: 12) {
+                            Image("contactAsset")
+                                .resizable()
+                                .frame(width: 22, height: 22)
+                            Text("Contact Us")
+                                .font(.system(size: 16, weight: .regular))
+                                .foregroundColor(.black)
+                            Spacer()
+                        }
+                        .frame(height: 46)
+                        .padding(.horizontal, 20)
+                    }
+                    .alert(isPresented: $isShowingMailAlert) {
+                        Alert(
+                            title: Text("Mail not available"),
+                            message: Text("Mail app is not configured on this device."),
+                            dismissButton: .default(Text("OK"))
+                        )
+                    }
+
+                    Divider()
+                        .background(Color(.systemGray4))
+
+                    Button(action: {
+                        isPresentingPolicySheet = true
+                    }) {
+                        HStack(spacing: 12) {
+                            Image("privacyAsset")
+                                .resizable()
+                                .frame(width: 22, height: 22)
+                            Text("Privacy Policy")
+                                .font(.system(size: 16, weight: .regular))
+                                .foregroundColor(.black)
+                            Spacer()
+                        }
+                        .frame(height: 46)
+                        .padding(.horizontal, 20)
+                    }
+
+                    Divider()
+                        .background(Color(.systemGray4))
+
+                    Button(action: {
+                        isPresentingPolicySheet = true
+                    }) {
+                        HStack(spacing: 12) {
+                            Image("termsAsset")
+                                .resizable()
+                                .frame(width: 22, height: 22)
+                            Text("Terms Of Use")
+                                .font(.system(size: 16, weight: .regular))
+                                .foregroundColor(.black)
+                            Spacer()
+                        }
+                        .frame(height: 46)
+                        .padding(.horizontal, 20)
+                    }
+                }
+                .background(Color.white)
+                .cornerRadius(12)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 12)
+                        .stroke(Color(.systemGray3), lineWidth: 1)
+                )
+                .padding(.horizontal, 32)
+                .padding(.top, 20)
 
                 Spacer()
             }
@@ -251,7 +227,50 @@ struct SettingsView: View {
         .sheet(isPresented: $isPresentingSubscription) {
             SubscriptionView()
         }
+        .sheet(isPresented: $isPresentingPolicySheet) {
+            PolicyWebView(url: policyURL)
+        }
     }
+
+    private func openMail() {
+        let email = "xteam448@gmail.com"
+        let subject = "Contact Us"
+        let encodedSubject = subject.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+        let urlString = "mailto:\(email)?subject=\(encodedSubject)"
+        if let url = URL(string: urlString) {
+            #if os(iOS)
+            if UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.open(url)
+            } else {
+                isShowingMailAlert = true
+            }
+            #endif
+        } else {
+            isShowingMailAlert = true
+        }
+    }
+}
+
+struct PolicyWebView: UIViewControllerRepresentable {
+    let url: URL
+
+    func makeUIViewController(context: Context) -> UIViewController {
+        let vc = UIViewController()
+        let webView = WKWebView(frame: .zero)
+        webView.translatesAutoresizingMaskIntoConstraints = false
+        vc.view.addSubview(webView)
+        NSLayoutConstraint.activate([
+            webView.topAnchor.constraint(equalTo: vc.view.topAnchor),
+            webView.bottomAnchor.constraint(equalTo: vc.view.bottomAnchor),
+            webView.leadingAnchor.constraint(equalTo: vc.view.leadingAnchor),
+            webView.trailingAnchor.constraint(equalTo: vc.view.trailingAnchor)
+        ])
+        let request = URLRequest(url: url)
+        webView.load(request)
+        return vc
+    }
+
+    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {}
 }
 
 #Preview {

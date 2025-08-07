@@ -378,16 +378,17 @@ struct NewEstimateView: View {
                     .presentationDetents([.medium])
                 }
                 .sheet(isPresented: $showDuePicker) {
-                    VStack {
+                    VStack(spacing: 0) {
                         DatePicker(
-                            "Due date",
+                            "",
                             selection: $tempDueDate,
                             displayedComponents: [.date]
                         )
                         .datePickerStyle(.graphical)
+                        .labelsHidden()
                         .padding()
                         HStack {
-                            Button("Clean") {
+                            Button("Clear") {
                                 viewModel.dueDate = nil
                                 showDuePicker = false
                             }
@@ -397,10 +398,14 @@ struct NewEstimateView: View {
                                 viewModel.dueDate = tempDueDate
                                 showDuePicker = false
                             }
-                            .foregroundColor(.blue)
                         }
-                        .padding()
+                        .font(.headline)
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 10)
+                        .background(Color(UIColor.systemGray6))
+                        .padding(.horizontal, 20)
                     }
+                    .padding(.bottom, 8)
                     .presentationDetents([.medium])
                 }
                 .sheet(isPresented: $showClientSheet) {

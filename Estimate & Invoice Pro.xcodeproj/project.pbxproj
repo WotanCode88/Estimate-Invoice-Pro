@@ -11,7 +11,6 @@
 		6A6ADBE22E3FB26700FEE734 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 6A6ADBE12E3FB26700FEE734 /* Alamofire */; };
 		6A6ADBE72E3FB28C00FEE734 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6A6ADBE62E3FB28C00FEE734 /* SnapKit */; };
 		6A6ADBEA2E3FB29900FEE734 /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 6A6ADBDE2E3FB24E00FEE734 /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		6A6ADD092E3FB4E100FEE734 /* SubscriptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6ADC982E3FB2BC00FEE734 /* SubscriptionViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,7 +28,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		6A6ADC982E3FB2BC00FEE734 /* SubscriptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionViewModel.swift; sourceTree = "<group>"; };
 		6A6ADD082E3FB31B00FEE734 /* Estimate & Invoice Pro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Estimate & Invoice Pro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -118,6 +116,7 @@
 				"Settings/Personal /PersonalView.swift",
 				Settings/SettingsView.swift,
 				Subsription/SubscriptionView.swift,
+				Subsription/SubscriptionViewModel.swift,
 				TabView/MainTabView.swift,
 			);
 			target = 6A6ADBC22E3FB0CD00FEE734 /* Estimate & Invoice Pro */;
@@ -209,7 +208,6 @@
 		6A6ADBBA2E3FB0CD00FEE734 = {
 			isa = PBXGroup;
 			children = (
-				6A6ADC982E3FB2BC00FEE734 /* SubscriptionViewModel.swift */,
 				6A6ADC9C2E3FB2BC00FEE734 /* App */,
 				6A6ADCA22E3FB2BC00FEE734 /* Core */,
 				6A6ADCA82E3FB2BC00FEE734 /* Models */,
@@ -300,7 +298,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A6ADD092E3FB4E100FEE734 /* SubscriptionViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,7 +310,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = HW3Y22VF4Y;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = App/Info.plist;
@@ -347,7 +344,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = HW3Y22VF4Y;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = App/Info.plist;

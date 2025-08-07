@@ -51,6 +51,7 @@ class SubscriptionViewModel: ObservableObject {
         }
         fetchProducts()
         listenForUpdates()
+        self.isSubscribed = true
     }
 
     deinit {
