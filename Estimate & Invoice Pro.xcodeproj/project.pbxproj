@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35EB212D2E4A763800CB21BA /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 35EB212C2E4A763800CB21BA /* Alamofire */; };
 		6A6ADBDF2E3FB24E00FEE734 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6A6ADBDE2E3FB24E00FEE734 /* RealmSwift */; };
-		6A6ADBE22E3FB26700FEE734 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 6A6ADBE12E3FB26700FEE734 /* Alamofire */; };
 		6A6ADBE72E3FB28C00FEE734 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6A6ADBE62E3FB28C00FEE734 /* SnapKit */; };
 		6A6ADBEA2E3FB29900FEE734 /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 6A6ADBDE2E3FB24E00FEE734 /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -125,6 +125,7 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Assets.xcassets,
+				Confic.storekit,
 				Font/Font.swift,
 				"Font/SongMyung-Regular.ttf",
 				"Font/Urbanist-VariableFont_wght.ttf",
@@ -196,7 +197,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A6ADBE22E3FB26700FEE734 /* Alamofire in Frameworks */,
+				35EB212D2E4A763800CB21BA /* Alamofire in Frameworks */,
 				6A6ADBDF2E3FB24E00FEE734 /* RealmSwift in Frameworks */,
 				6A6ADBE72E3FB28C00FEE734 /* SnapKit in Frameworks */,
 			);
@@ -205,6 +206,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A4A0D412E466B3300606CC7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6A6ADBBA2E3FB0CD00FEE734 = {
 			isa = PBXGroup;
 			children = (
@@ -215,6 +223,7 @@
 				6A6ADD042E3FB2BC00FEE734 /* Resources */,
 				6A6ADD072E3FB2BC00FEE734 /* Shared */,
 				6A6ADD082E3FB31B00FEE734 /* Estimate & Invoice Pro.app */,
+				6A4A0D412E466B3300606CC7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -237,8 +246,8 @@
 			name = "Estimate & Invoice Pro";
 			packageProductDependencies = (
 				6A6ADBDE2E3FB24E00FEE734 /* RealmSwift */,
-				6A6ADBE12E3FB26700FEE734 /* Alamofire */,
 				6A6ADBE62E3FB28C00FEE734 /* SnapKit */,
+				35EB212C2E4A763800CB21BA /* Alamofire */,
 			);
 			productName = "Estimate & Invoice Pro";
 			productReference = 6A6ADD082E3FB31B00FEE734 /* Estimate & Invoice Pro.app */;
@@ -270,8 +279,8 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				6A6ADBDB2E3FB24D00FEE734 /* XCRemoteSwiftPackageReference "realm-swift" */,
-				6A6ADBE02E3FB26700FEE734 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				6A6ADBE52E3FB28C00FEE734 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				35EB212B2E4A763800CB21BA /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 6A6ADBBA2E3FB0CD00FEE734;
@@ -311,7 +320,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 4;
-				DEVELOPMENT_TEAM = HW3Y22VF4Y;
+				DEVELOPMENT_TEAM = 4FV59Y3246;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -345,7 +354,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 4;
-				DEVELOPMENT_TEAM = HW3Y22VF4Y;
+				DEVELOPMENT_TEAM = 4FV59Y3246;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -517,20 +526,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		35EB212B2E4A763800CB21BA /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.2;
+			};
+		};
 		6A6ADBDB2E3FB24D00FEE734 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift.git";
 			requirement = {
 				branch = master;
 				kind = branch;
-			};
-		};
-		6A6ADBE02E3FB26700FEE734 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.10.2;
 			};
 		};
 		6A6ADBE52E3FB28C00FEE734 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
@@ -544,15 +553,15 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		35EB212C2E4A763800CB21BA /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 35EB212B2E4A763800CB21BA /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
 		6A6ADBDE2E3FB24E00FEE734 /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 6A6ADBDB2E3FB24D00FEE734 /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
-		};
-		6A6ADBE12E3FB26700FEE734 /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6A6ADBE02E3FB26700FEE734 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
 		};
 		6A6ADBE62E3FB28C00FEE734 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;

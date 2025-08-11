@@ -12,19 +12,19 @@ struct SubscriptionProduct: Identifiable, Equatable {
 extension SubscriptionProduct {
     static let annual = SubscriptionProduct(
         id: "com.yourapp.subscription.annual",
-        title: "Annual Subscription",
+        title: "per year",
         assetName: "annualAsset",
         price: "9.99$ / week"
     )
     static let monthly = SubscriptionProduct(
         id: "com.yourapp.subscription.monthly",
-        title: "Monthly Subscription",
+        title: "per month",
         assetName: "monthlyAsset",
         price: "99.99$ / year"
     )
     static let week = SubscriptionProduct(
         id: "com.yourapp.subscription.weektrial",
-        title: "Week Subscription",
+        title: "per week",
         assetName: "weekAsset",
         price: "5,99 / week"
     )
